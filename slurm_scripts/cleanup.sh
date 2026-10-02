@@ -42,5 +42,7 @@ for d in $CONDA_PREFIX/lib/python3.10/site-packages/nvidia/*/lib; do
 done
 export PYTHONPATH="$(pwd):$PYTHONPATH"
 
-$PY algorithms/train.py --algo IPPO --env cleanup
+# $PY algorithms/train.py --algo IPPO --env cleanup
+
+$PY src/train_suite.py --config "src/configs/fair_mappo_cleanup_config.yaml"
 
